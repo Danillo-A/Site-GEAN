@@ -1,0 +1,419 @@
+ body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
+
+    /* --- FORMULARIO INICIO --- */
+    .hero {
+      position: relative;
+      height: 550px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .form-container {
+      position: relative;
+      z-index: 2;
+      margin-right: 8%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .form-container h3 { margin-top: 0; color: #07358F; }
+    .form-container input {
+      width: 100%; padding: 10px; margin: 8px 0;
+      border: 1px solid #ccc; border-radius: 6px;
+    }
+    .form-container button {
+      width: 100%; padding: 12px;
+      background: #07358F; color: #fff; font-weight: bold;
+      border: none; border-radius: 6px; cursor: pointer;
+    }
+    .form-container button:hover { background: #000f3a; }
+    .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 10px;
+}
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.actions a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.actions a svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.actions a.whatsapp {
+  background: #25d366; /* verde WhatsApp */
+}
+.actions a.whatsapp:hover {
+  background: #1ebe57;
+}
+
+.actions a.telefone {
+  background: #07358F; /* azul escuro */
+}
+.actions a.telefone:hover {
+  background: #000f3a;
+}
+
+
+
+/* --- BIO --- */
+.bio {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background: #f9f9f9; /* fundo geral da seção */
+}
+
+.bio-box {
+  background: #214455; /* azul escuro */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.bio-box img {
+  border-radius: 48%; /* transforma em círculo */
+  width: 160px;        /* largura da imagem */
+  height: 160px;       /* altura da imagem */
+  margin-right: 20px;
+  border: 3px solid #fff;
+  object-fit: cover;   /* garante que a imagem preencha o círculo sem distorcer */
+}
+
+.bio-box p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+/* --- INFO --- */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 20px;
+  background-color: #f7f8fc;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  width: 220px;
+  min-height: 200px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9e9e9;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável/interativo */
+
+  /* ✅ ADICIONADO: Prepara o card para a animação */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon {
+  font-size: 50px;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+
+  /* ✅ ADICIONADO: Prepara o ícone para a animação de cor */
+  transition: color 0.3s ease;
+}
+
+.card-title {
+  color: #1e3a8a;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-text {
+  color: #1e3a8a;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 5px 0 0 0;
+}
+
+
+/* --- ✨ NOVAS REGRAS DE ANIMAÇÃO AO PASSAR O MOUSE ✨ --- */
+
+.card:hover {
+  /* Levanta o card sutilmente no eixo Y */
+  transform: translateY(-8px); 
+  
+  /* Aumenta a sombra para dar profundidade */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); 
+}
+
+.card:hover .card-icon {
+  /* Muda a cor do ícone quando o mouse está sobre o card */
+  color: #3b82f6; /* Um azul mais vibrante */
+}
+
+    
+
+
+/* --- CARROSSEL --- */
+/* Container principal da seção do carrossel */
+.carrossel-section {
+  display: flex;
+  align-items: center; /* Alinha o título e o carrossel verticalmente */
+  background-color: #97aebb;
+  padding: 40px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  
+  /* Opcional: Limita a largura máxima e centraliza */
+  max-width: 1400px;
+  margin: 20px auto; /* Adiciona um espaço em cima/embaixo e centraliza */
+  border-radius: 12px; /* Arredonda as bordas da seção inteira */
+}
+
+/* Container do Título (Esquerda) */
+.titulo-wrapper {
+  flex-basis: 30%;
+  color: #ffffff;
+  padding-right: 40px;
+}
+
+.titulo-wrapper h2 {
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 2em; /* Tamanho do título ajustado */
+}
+
+/* Container do Carrossel (Direita) */
+.carrossel-wrapper {
+  flex-basis: 70%;
+  width: 70%;
+}
+
+/* Estilos específicos do Swiper */
+.swiper.meu-carrossel {
+  width: 100%;
+  height: 500px; /* <<< CONTROLE A ALTURA AQUI */
+  border-radius: 8px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* --- CLIENTES SATISFEITOS --- */
+.clientes-satisfeitos {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.clientes-satisfeitos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.videos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.videos-container video {
+  width: 300px;
+  height: 550px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 4px solid #fff; /* ✅ Borda branca fina estilo Instagram */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* --- SEÇÃO PRODUTOS EM DESTAQUE --- */
+
+.produtos-destaque { font-family: Arial, sans-serif; padding: 50px 20px; background-color: #f8f9fa; }
+.produtos-destaque h2 { text-align:center; margin-bottom:32px; color:#333; font-weight:700; font-size:14px; letter-spacing:1px; }
+
+/* grid responsivo */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* card */
+.produto-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: pointer; /* indica que é clicável */
+}
+.produto-card:hover { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.12); }
+
+/* imagem */
+.card-imagem-wrapper { position: relative; }
+.card-imagem-wrapper img {
+  width:100%;
+  height:300px;            /* ajuste a altura como preferir (250~300 é comum) */
+  object-fit:cover;
+  display:block;
+}
+
+/* tag */
+.tag-lancamento {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e0f2fe;
+  color: #0c54a8;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight:700;
+}
+
+/* conteúdo */
+.card-conteudo { padding: 18px; flex-grow:1; }
+.card-conteudo h3 { margin:0 0 8px 0; color:#111; font-size:1.05rem; }
+.card-localizacao { color:#667; font-size:0.9rem; margin-bottom:12px; }
+.card-descricao { color:#555; font-size:0.92rem; line-height:1.5; }
+
+/* botão whatsapp */
+.card-botao-wrapper { padding: 16px 18px 22px; text-align:center; }
+.btn-whatsapp {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:#25D366; color:#fff; text-decoration:none; padding:12px 18px; border-radius:8px;
+  font-weight:700; transition:background .18s;
+}
+.btn-whatsapp:hover { background:#1EBE57; }
+
+/* responsividade */
+@media (max-width: 1000px) {
+  .cards-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cards-container { grid-template-columns: 1fr; }
+  .card-imagem-wrapper img { height:200px; }
+}
+
+
+/* --- FOOTER --- */
+    footer {
+    background: #f2f2f2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Redes sociais */
+  .social {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+  }
+
+  .social a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .social a:hover {
+    color: #243c94;
+  }
+
+  /* Texto central */
+  .footer-text {
+    text-align: center;
+    flex: 1;
+  }
+
+  /* Botão */
+  .footer-button {
+    border: 2px solid #000;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+  }
+
+  .footer-button:hover {
+    background: #ddd;
+  }
+  
